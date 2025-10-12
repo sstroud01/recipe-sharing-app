@@ -1,3 +1,32 @@
+# Recipe Sharing App (Docker)
+
+This repository contains a small recipe sharing application (frontend + backend) and Docker configuration to run the full stack locally using Docker Compose.
+
+Quick start
+1. From the project root run:
+
+```powershell
+docker-compose up --build
+```
+
+2. Open the frontend in your browser:
+
+- http://localhost:3000
+
+3. Useful backend endpoints:
+
+- Health: http://localhost:5000/api/health
+- Recipes: http://localhost:5000/api/recipes
+
+Stop the stack:
+
+```powershell
+docker-compose down
+```
+
+Notes
+- The backend uses an on-disk SQLite file persisted in a Docker named volume `backend-data`.
+- `VITE_API_URL` is set at build time in `docker-compose.yml` so the frontend is built to talk to the backend at `http://localhost:5000`.
 # Assignment #5 - Dockerize a Recipe Sharing Application
 
 A full-stack recipe sharing application with React frontend and Node.js backend.
