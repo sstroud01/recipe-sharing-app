@@ -20,7 +20,7 @@ jobs:
       - name: Test Backend
         run: |
           cd backend
-          npm install
+          npm ci
           npm test
 
       - name: Set up Node.js (Frontend)
@@ -31,5 +31,5 @@ jobs:
       - name: Test Frontend
         run: |
           cd frontend
-          npm install
+          npm ci
           npm test
