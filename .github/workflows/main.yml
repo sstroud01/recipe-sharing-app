@@ -23,6 +23,11 @@ jobs:
           npm install
           npm test
 
+      - name: Set up Node.js (Frontend)
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
       - name: Test Frontend
         run: |
           cd frontend
